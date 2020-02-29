@@ -1,0 +1,16 @@
+.botao, button {
+    border-style: solid;
+    text-decoration: none;
+    color: black;
+    border-color: black;
+    border-width: 1px;
+    background: #c0e0ff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    font-family: Arial;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}

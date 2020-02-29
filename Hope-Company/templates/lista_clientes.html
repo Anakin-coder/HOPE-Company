@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clientes</title>
+        <link rel="stylesheet" type="text/css" href="/static/clientes.css"></link>
+    </head>
+    <body>
+        <h1>Clientes:</h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Telefone</td>
+                <td>Endereço</td>
+                <td>Sexo</td>
+                <td>&nbsp;</td>
+            </tr>
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{cliente['id_cliente']}}</td>
+                    <td>{{cliente['nome']}}</td>
+                    <td>{{cliente['telefone']}}</td>
+                    <td>{{cliente['endereco']}}</td>
+                    <td>{% if cliente['sexo'] == 'M' %}Masculino{% else %}Feminino{% endif %}</td>
+                    <td><a href="/cliente/{{cliente['id_cliente']}}" class="botao">Editar</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p><a href="/" class="botao">Voltar</a></p>
+    </body>
+</html>
